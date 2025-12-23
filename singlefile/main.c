@@ -338,7 +338,9 @@ int main(int ac, char** av) {
     }
 
     pwrite("\n");
-    char pe = eval(&e);
+    char pe = 'a';
+    // pe = eval(&e); // 1 step
+    while (pe == 'a') pe = eval(&e); // full eval
     (void)(pe);
     fwrite("E[%c]: ", pe);
     write_exp(e);
