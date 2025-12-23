@@ -1,0 +1,11 @@
+Diagnostics:
+  ClangTidy:
+    Add: []
+    Remove: ['*']
+
+CompileFlags:
+  Add: [
+    -x, c,
+    -std=c11,
+  ]
+  Remove: [-xc++]
