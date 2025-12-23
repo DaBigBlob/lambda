@@ -5,9 +5,9 @@ ART = ${CLI} *.o *.out.*
 
 .PHONY: c all r
 
-all: r
+all: ${CLI}
 
-lambda: main.c
+${CLI}: main.c
 	${CC} ${CFLAGS} ${XFLAGS} $^ -o $@
 
 c:
